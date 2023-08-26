@@ -28,13 +28,12 @@ function maxStoreWater() {
   return res;
 }
 
-
 function storeMostWater() {
   if (!height.length) return 0;
   let left = 0;
   let right = height.length - 1;
-  let leftMax = 0;
-  let rightMax = 0;
+  let leftMax = height[left];
+  let rightMax = height[right];
   let res = 0;
   while (left < right) {
     if (leftMax < rightMax) {
