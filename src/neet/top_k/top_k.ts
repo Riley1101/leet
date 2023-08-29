@@ -1,4 +1,4 @@
-let nums = [5, 3, 1, 1, 1, 3, 73, 1],
+let nums = [1, 1, 1, 2, 2, 3],
   k = 2;
 
 export class MaxHeap {
@@ -90,7 +90,6 @@ function topK() {
     }
   }
   let list = [...map];
-  console.log(list)
   list.sort((o1, o2) => {
     if (o1[1] == o2[1]) return o2[0] - o1[0];
     else return o2[1] - o1[1];
@@ -99,9 +98,28 @@ function topK() {
   for (let i = 0; i < k; i++) {
     result.push(list[i][0]);
   }
-  return result
+  return result;
 }
 
+function top_k_2() {
+  let count: { [key: string]: number } = {};
+  for (let i of nums) {
+    if (i in count) {
+      count[i] += 1;
+    } else {
+      count[i] = 1;
+    }
+  }
+  let objs: (number | number)[][] = [];
+  Object.keys(count).forEach((item) => {
+    objs.push([Number(item), count[item]]);
+  });
+  let sorted = objs.sort((a, b) => a[1] - b[2]);
+  let result = [];
+  for (let i = 0; i < k; i++) {
+    result.push(sorted[i][0]);
+  }
+  return result;
+}
 
-topK()
-
+console.log(top_k_2());

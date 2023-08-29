@@ -26,12 +26,10 @@ function bfs(graph: Graph, target: Element): number {
   while (queue.length) {
     let curChar = queue.shift() as Element;
     let cur = graph[curChar];
-    console.log(curChar)
     if (curChar === "T") {
       return distance;
     }
     cur.forEach((item) => {
-      distance += item.w;
       if (!set.has(item.to)) {
         queue.push(item.to);
       }
@@ -41,4 +39,4 @@ function bfs(graph: Graph, target: Element): number {
   return distance;
 }
 
-console.log(bfs(graph as Graph, "B"));
+console.log(bfs(graph as Graph, "E"));
