@@ -47,9 +47,9 @@ function mostMoney(name: Persons, graph: Graph, degree: number) {
           queue.push(cp);
         }
       }
-    }
+}
   }
   return max;
 }
 
-console.log(mostMoney("Bob", graph, 3));
+console.log(mostMoney("Alice", graph, 3));
