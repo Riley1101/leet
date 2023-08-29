@@ -15,24 +15,30 @@ let graph = {
 };
 
 type Element = keyof typeof graph;
+type Graph = {
+  [key in Element]: { to: Element; w: number }[];
+};
 
-function dfs(start: Element) {
-  let set = new Set();
-  let stack: Element[] = [start];
-  while (stack.length) {
-    let cur: Element = stack.pop() as Element;
-    if (!set.has(cur)) {
-        console.log(cur)
-      let curNode = graph[cur];
-      curNode.forEach((val) => {
-        if (stack.indexOf(val.to as Element) === -1) {
-          stack.push(val.to as Element);
-        }
-      });
-    }else{
-        set.add(cur)
+function bfs(graph: Graph, target: Element): number {
+  let queue: Element[] = [target];
+  let set = new Set(target);
+  let distance = 0;
+  while (queue.length) {
+    let curChar = queue.shift() as Element;
+    let cur = graph[curChar];
+    console.log(curChar)
+    if (curChar === "T") {
+      return distance;
     }
+    cur.forEach((item) => {
+      distance += item.w;
+      if (!set.has(item.to)) {
+        queue.push(item.to);
+      }
+      set.add(item.to);
+    });
   }
+  return distance;
 }
 
-console.log(dfs("A"));
+console.log(bfs(graph as Graph, "B"));
