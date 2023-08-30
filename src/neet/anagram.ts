@@ -39,5 +39,10 @@ export function anagram_2() {
   return true;
 }
 
+export function anagram_3() {
+    
+}
+
 let res = anagram_2();
+
 console.log(res);

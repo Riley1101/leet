@@ -8,6 +8,7 @@ function characterReplacement() {
   let res = 0;
   let map: Record<string, number> = {};
   for (let right = 0; right < s.length; right++) {
+
     map[s[right]] = map[s[right]] ? map[s[right]] + 1 : 1;
 
     let most = Object.keys(map).reduce((a, b) => (map[a] > map[b] ? a : b));
@@ -20,4 +21,10 @@ function characterReplacement() {
   }
   return res;
 }
+
+
+function longest_character_replace() {
+
+}
+
 l(characterReplacement());

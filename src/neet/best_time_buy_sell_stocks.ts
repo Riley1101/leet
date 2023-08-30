@@ -16,4 +16,19 @@ function maxProfit(): number {
   return maxP;
 }
 
-console.log(maxProfit());
+function stock_profit() {
+  let left = 0;
+  let right = 1;
+  let max = 0;
+  while (right < prices.length) {
+    if (prices[left] > prices[right]) {
+      left = right;
+    } else {
+      max = Math.max(max, prices[right] - prices[left]);
+    }
+    right++;
+  }
+  return max;
+}
+
+console.log(stock_profit());
