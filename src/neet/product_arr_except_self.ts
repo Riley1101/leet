@@ -40,4 +40,23 @@ function product_array_without_self() {
   return output;
 }
 
-console.log(product_array_without_self());
+function product_array_without_self_2() {
+  let n = nums.length;
+  let prefix = [];
+  let postfix = [];
+  let result = [];
+  prefix[0] = 1;
+  postfix[n - 1] = 1;
+  for (let i = 1; i < n; i++) {
+    prefix[i] = nums[i - 1] * prefix[i - 1];
+  }
+  for (let j = n - 2; j >= 0; j--) {
+    postfix[j] = nums[j + 1] * postfix[j + 1];
+  }
+  for (let i = 0; i < n; i++) {
+    result[i] = prefix[i] * postfix[i];
+  }
+  console.log(result);
+}
+
+console.log(product_array_without_self_2());

@@ -36,4 +36,20 @@ function most_water() {
   return max;
 }
 
-console.log(most_water())
+function most_water_1() {
+  let left = 0;
+  let right = height.length - 1;
+  let max = 0;
+  while (left < right) {
+    let area = (right - left) * Math.min(height[left], height[right]);
+    max = Math.max(area, max);
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+  return max;
+}
+
+console.log(most_water_1());
