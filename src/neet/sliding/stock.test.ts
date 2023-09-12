@@ -18,6 +18,6 @@ function stock_option() {
   return max;
 }
 
-test.skip("stock_option", () => {
+test("stock_option", () => {
   expect(stock_option()).toBe(target);
 });
