@@ -15,6 +15,18 @@ class LinkedList {
     this.length = 0;
   }
 
+  reverse_4() {
+    let prev = undefined;
+    let cur = this.head;
+    while (cur) {
+      let next = cur.next;
+      cur.next = prev;
+      prev = cur;
+      cur = next;
+    }
+    this.head = prev;
+  }
+
   reverse() {
     let prev = undefined;
     let cur = this.head;
@@ -71,10 +83,12 @@ class LinkedList {
   }
   visit_nodes() {
     let tmp = this.head;
+    let res = [];
     for (let i = 0; i < this.length; i++) {
-      console.log(tmp?.value);
+      res.push(tmp?.value);
       tmp = tmp?.next;
     }
+    return res;
   }
 }
 
@@ -86,5 +100,5 @@ l.push(4);
 l.push(5);
 l.push(6);
 l.visit_nodes();
-l.reverse_3();
+l.reverse_4();
 l.visit_nodes();
