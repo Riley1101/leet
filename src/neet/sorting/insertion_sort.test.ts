@@ -24,9 +24,9 @@ function insertion_sort(nums: number[]) {
 }
 
 test("insertion_sort", () => {
-  expect(insertion_sort(arr1)).toEqual(arr1.sort());
-  expect(insertion_sort(arr2)).toEqual(arr2.sort());
-  expect(insertion_sort(arr3)).toEqual(arr3.sort());
-  expect(insertion_sort(arr4)).toEqual(arr4.sort());
-  expect(insertion_sort(arr5)).toEqual(arr5.sort());
+  expect(insertion_sort(arr1)).toEqual(arr1.sort((a, b) => a - b));
+  expect(insertion_sort(arr2)).toEqual(arr2.sort((a, b) => a - b));
+  expect(insertion_sort(arr3)).toEqual(arr3.sort((a, b) => a - b));
+  expect(insertion_sort(arr4)).toEqual(arr4.sort((a, b) => a - b));
+  expect(insertion_sort(arr5)).toEqual(arr5.sort((a, b) => a - b));
 });

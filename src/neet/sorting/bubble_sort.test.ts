@@ -27,9 +27,9 @@ function bubble_sort(nums: number[]) {
 }
 
 test("bubble_sort", () => {
-  expect(bubble_sort(arr1)).toEqual(arr1.sort());
-  expect(bubble_sort(arr2)).toEqual(arr2.sort());
-  expect(bubble_sort(arr3)).toEqual(arr3.sort());
-  expect(bubble_sort(arr4)).toEqual(arr4.sort());
-  expect(bubble_sort(arr5)).toEqual(arr5.sort());
+  expect(bubble_sort(arr1)).toEqual(arr1.sort((a, b) => a - b));
+  expect(bubble_sort(arr2)).toEqual(arr2.sort((a, b) => a - b));
+  expect(bubble_sort(arr3)).toEqual(arr3.sort((a, b) => a - b));
+  expect(bubble_sort(arr4)).toEqual(arr4.sort((a, b) => a - b));
+  expect(bubble_sort(arr5)).toEqual(arr5.sort((a, b) => a - b));
 });
