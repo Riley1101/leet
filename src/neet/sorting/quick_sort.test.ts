@@ -9,7 +9,7 @@ const arr5 = [17, 23, 9, 33, 6, 11];
 function partition(arr: number[], low: number, high: number) {
   const pivot = arr[high];
   let idx = low - 1;
-  for (let i = low; i < high; ++i) {
+  for (let i = low; i < high; i++) {
     if (arr[i] < pivot) {
       idx++;
       [arr[i], arr[idx]] = [arr[idx], arr[i]];
@@ -32,7 +32,7 @@ function qs(nums: number[], low: number, high: number) {
 }
 
 function quick_sort(nums: number[]): number[] {
-return  qs(nums, 0, nums.length - 1);
+  return qs(nums, 0, nums.length - 1);
 }
 
 test("insertion_sort", () => {
