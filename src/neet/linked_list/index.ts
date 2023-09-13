@@ -1,3 +1,6 @@
+/**
+ * @module {Node, LinkedList}
+ */
 export class Node {
   value: number;
   next?: Node;

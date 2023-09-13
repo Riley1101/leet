@@ -1,3 +1,5 @@
+import { expect, test } from "bun:test";
+
 import LinkedList, { Node } from ".";
 
 let list1 = new LinkedList();
@@ -9,25 +11,26 @@ function merge_two_linked_list(
   list1: Node | undefined,
   list2: Node | undefined,
 ) {
-  let dumm = new Node(1);
-  let tail = dumm;
-
+  let dun = new Node(1);
   while (list1 && list2) {
     if (list1.value < list2.value) {
-      tail.next = list1;
+      dun.next = list1;
       list1 = list1.next;
     } else {
-      tail.next = list2;
+      dun.next = list2;
       list2 = list2.next;
     }
-    tail = tail.next;
+    dun = dun.next;
   }
   if (list1) {
-    tail.next = list1;
+    dun.next = list1;
   } else if (list2) {
-    tail.next = list2;
+    dun.next = list2;
   }
-  return dumm.next;
-}
 
-merge_two_linked_list(list1.head, list2.head);
+  return dun.next;
+}
+test("merge_two_linked_list", () => {
+  let merged = merge_two_linked_list(list1.head, list2.head);
+  let li = new LinkedList();
+});
