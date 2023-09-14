@@ -13,5 +13,3 @@ function longeestConsequtive() {
   }
   return longest;
 }
-
-console.log(longeestConsequtive());

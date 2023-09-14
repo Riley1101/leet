@@ -35,4 +35,3 @@ function group_anagram() {
 
   return res;
 }
-console.log(group_anagram());

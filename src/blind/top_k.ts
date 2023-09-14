@@ -82,4 +82,3 @@ function top_k() {
   return res;
 }
 
-console.log(top_k());

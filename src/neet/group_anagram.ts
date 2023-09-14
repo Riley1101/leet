@@ -34,4 +34,3 @@ function grouping_anagram_2() {
   });
   return res;
 }
-console.log(grouping_anagram_2());

@@ -57,6 +57,15 @@ export default class LinkedList {
     }
     return res;
   }
+  into_array(): number[] {
+    let tmp = this.head;
+    let res = [];
+    for (let i = 0; i < this.length; i++) {
+      res.push(tmp?.value as number);
+      tmp = tmp?.next;
+    }
+    return res;
+  }
   from_array(arrs: number[]) {
     for (let i of arrs) {
       this.push(i);

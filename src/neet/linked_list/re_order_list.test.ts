@@ -37,7 +37,6 @@ function reorder_linkedlist(head: Node) {
     first = tmp1 as Node;
     second = tmp2;
   }
-  console.log(head);
 }
 
 test("Reorder", () => {
