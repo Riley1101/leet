@@ -39,6 +39,12 @@ export class BinaryTree {
       }
     }
   }
+
+  from_array(arr: number[]) {
+    for (let i = 0; i < arr.length; i++) {
+      this.add(arr[i]);
+    }
+  }
 }
 
 export function breadth_first_search(queue: Node[], res: number[]): number[] {
@@ -91,22 +97,12 @@ export function post_order_traversals(node: Node, res: number[]) {
 }
 test("BinaryTree", () => {
   let bt = new BinaryTree();
-  bt.add(12);
-  bt.add(4);
-  bt.add(5);
-  bt.add(14);
-  bt.add(13);
-  bt.add(2);
-  bt.add(3);
-  bt.add(16);
-  bt.add(1);
   expect(pre_order_traversals(bt.root as Node, [])).toEqual([
     12, 4, 2, 1, 3, 5, 14, 13, 16,
   ]);
   expect(in_order_traversals(bt.root as Node, [])).toEqual([
     1, 2, 3, 4, 5, 12, 13, 14, 16,
   ]);
-  console.log(post_order_traversals(bt.root as Node, []));
   expect(post_order_traversals(bt.root as Node, [])).toEqual([
     1, 3, 2, 5, 4, 13, 16, 14, 12,
   ]);
