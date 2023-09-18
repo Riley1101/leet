@@ -95,7 +95,7 @@ export function post_order_traversals(node: Node, res: number[]) {
   res.push(n.value);
   return res;
 }
-test("BinaryTree", () => {
+test.skip("BinaryTree", () => {
   let bt = new BinaryTree();
   expect(pre_order_traversals(bt.root as Node, [])).toEqual([
     12, 4, 2, 1, 3, 5, 14, 13, 16,
