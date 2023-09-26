@@ -15,7 +15,7 @@ function most_water(height: number[]) {
       right--;
     }
   }
-  return max
+  return max;
 }
 
 test("most_water", () => {
