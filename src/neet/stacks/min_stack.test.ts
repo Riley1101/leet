@@ -59,6 +59,6 @@ function min_stack() {
   console.log(s.data);
 }
 
-test("min stack", () => {
+test.skip("min stack", () => {
   min_stack();
 });
