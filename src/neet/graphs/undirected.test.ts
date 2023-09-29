@@ -1,5 +1,4 @@
 import { test, expect } from "bun:test";
-import exp from "constants";
 
 type G = Record<string, string[]>;
 
