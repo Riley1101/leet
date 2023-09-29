@@ -2,14 +2,6 @@ import { test, expect } from "bun:test";
 
 type G = Record<string, number[]>;
 
-const data: G = {
-  0: [1, 2],
-  1: [0, 3],
-  2: [0, 4],
-  3: [1],
-  4: [2],
-};
-
 function traverse(graph: G, current: string, visited: Set<string>) {
   if (visited.has(current)) return false;
   visited.add(current);
