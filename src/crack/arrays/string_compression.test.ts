@@ -45,5 +45,4 @@ test("string_compression", () => {
   let input6 = "aaabbbcccddddeeeee";
   let output6 = "a3b3c3d4e5";
   expect(string_compression(input6, output6)).toBe(output6);
-
 });
