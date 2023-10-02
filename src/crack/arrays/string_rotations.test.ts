@@ -1,8 +1,5 @@
 import { test, expect } from "bun:test";
 
-let str1 = "erbottlewat";
-let str2 = "waterbottle";
-
 function isRotation(str1: string, str2: string) {
   if (str1.length == 0 && str2.length == 0) return true;
   let len = str1.length;
