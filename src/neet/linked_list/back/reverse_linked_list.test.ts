@@ -20,6 +20,5 @@ test("reverse_linkedList", () => {
   let a = reverse_linkedList(ll.head as Node);
   ll.head = a;
 
-
   expect(ll.into_array()).toEqual([5, 4, 3, 2, 1]);
 });
