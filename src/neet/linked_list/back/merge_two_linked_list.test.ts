@@ -1,5 +1,4 @@
 import { expect, test } from "bun:test";
-import exp from "constants";
 
 import LinkedList, { Node } from "..";
 
