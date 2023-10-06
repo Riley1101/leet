@@ -6,8 +6,8 @@ t.from_array([4, 2, 7, 1, 3, 6, 9]);
 let out = 3;
 
 function maxDepth(root: TreeNode | null) {
+  let maxDepth = 0;
   let queue = [root];
-  let total = 0;
   while (queue.length) {
     for (let i = 0; i < queue.length; i++) {
       let cur = queue.shift();
@@ -15,12 +15,12 @@ function maxDepth(root: TreeNode | null) {
         queue.push(cur.left);
       }
       if (cur?.right) {
-        queue.push(cur.left);
+        queue.push(cur.right);
       }
     }
-    total += 1;
+    maxDepth++;
   }
-  return total;
+  return maxDepth;
 }
 
 test("maxDepth", () => {
