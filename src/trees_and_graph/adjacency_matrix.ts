@@ -12,7 +12,7 @@ function bfs(graph: WeightedAdjacencyMatrix, source: number, needle: number) {
     }
     const adj = graph[curr];
     for (let i = 0; i < graph.length; i++) {
-      if (adj[i]=== 0) continue;
+      if (adj[i] === 0) continue;
       if (seen[i]) {
         continue;
       }
