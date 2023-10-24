@@ -25,7 +25,6 @@ function create_list_node(t: TreeNode) {
     }
     res.push(lev);
   }
-  console.log(res);
 }
 
 test("create_list_node", () => {
