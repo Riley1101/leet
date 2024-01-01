@@ -19,12 +19,12 @@ const graph: G = {
  *  e    f
  */
 function dfs_directed(graph: G, src: string) {
-  let res = [];
-  let stack: string[] = [src];
+  const res = [];
+  const stack: string[] = [src];
   while (stack.length > 0) {
-    let cur = stack.pop() as string;
+    const cur = stack.pop() as string;
     res.push(cur);
-    for (let n of graph[cur]) {
+    for (const n of graph[cur]) {
       stack.push(n);
     }
   }

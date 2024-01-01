@@ -6,8 +6,9 @@ function canPlaceFlower(flowerBed: number[], n: number) {
       n--;
     }
   }
-  if (n <= 0) {
-    return true;
+  if(n<= 0) {
+      return true
   }
-  return false;
+  return false
+
 }

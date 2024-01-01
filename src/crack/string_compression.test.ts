@@ -1,5 +1,6 @@
 import { expect, test } from "bun:test";
 
+
 /**
  *  start walking the string check if current item and previous match
  *  prev = ""
